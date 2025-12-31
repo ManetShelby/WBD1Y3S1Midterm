@@ -49,3 +49,19 @@ body {
   height: 100%;
   object-fit: cover;     /* 🔥 fills container */
 }
+.category {
+  background: #f8f8f8;
+  border-radius: 16px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.category-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.category:hover {
+  background: #ffe8a1;
+}
