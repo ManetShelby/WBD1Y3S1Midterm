@@ -7,13 +7,19 @@ const path=require('path');
 
 app.use(express.urlencoded({ extended: true })); 
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/about', (req, res) => {
+app.get('/recipes', (req, res) => {
     
     res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'services.html'));
+});
+app.get('/contact', (req, res) => { 
+    res.sendFile(path.join(__dirname, 'public', 'contact.html'));
 });
 
 app.post('/submit', (req, res) => {
