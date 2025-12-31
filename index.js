@@ -18,7 +18,8 @@ app.get('/about', (req, res) => {
 
 app.post('/submit', (req, res) => {
     const data = req.body;
-    res.send(`ទទួលបានទិន្នន័យ: ${JSON.stringify(data)}`); 
+    res.send(`Submit sucess ${JSON.stringify(data)}`); 
+    alert.box("Submit sucess");
 });
 
 app.listen(3000, () => {
