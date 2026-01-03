@@ -63,5 +63,66 @@ body {
 }
 
 .category:hover {
-  background: #ffe8a1;
+  background: #f5e9c4;
+}
+/* Navbar entrance animation */
+.animated-navbar {
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Nav link hover underline animation */
+.navbar .nav-link {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar .nav-link:hover {
+    transform: translateY(-2px);
+}
+.category {
+    cursor: pointer;
+}
+
+.category-img {
+    width: 100%;
+    max-width: 80px;   /* adjust size if needed */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.category:hover .category-img {
+    transform: scale(1.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.category p {
+    transition: color 0.3s ease;
+}
+
+.category:hover p {
+    color: #28a745; /* Bootstrap green */
 }
