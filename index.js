@@ -16,7 +16,7 @@ app.get('/recipes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 app.get('/blog', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'services.html'));
+    res.sendFile(path.join(__dirname, 'public', 'blog.html'));
 });
 app.get('/contact', (req, res) => { 
     res.sendFile(path.join(__dirname, 'public', 'contact.html'));
