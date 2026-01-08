@@ -29,6 +29,7 @@ app.post('/submit', (req, res) => {
     const data = req.body;
     res.send(`Submit sucess ${JSON.stringify(data)}`); 
     alert.box("Submit sucess");
+    console.log(data);
 });
 
 app.listen(3000, () => {
